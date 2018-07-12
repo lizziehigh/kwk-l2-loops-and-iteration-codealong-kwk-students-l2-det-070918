@@ -12,10 +12,13 @@ return array
 function tailsNeverFails() {
   heads = false
   tails = 0
-  while (heads === 0) {
+  while (heads === false) {
     var flip = Math.random()
-  if (flip == 1) {
-    heads++
+  if (flip >= .5) {
+    tails++
+  }
+  else {
+    heads = true
   }
     
   }
